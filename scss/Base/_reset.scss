@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  font-family: "Roboto",Arial,Helvetica,sans-serif;
+}
+body.btMenuVerticalOn{
+  width: 100vw;
+  overflow: hidden;
+}
+.btPageWrap{
+  position: relative;
+  overflow: hidden;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.port:after {
+  content: " ";
+  display: table;
+  width: 100%;
+  clear: both;
+  line-height: 0;
+}
+.mainHeader:after {
+  content: " ";
+  display: table;
+  width: 100%;
+  clear: both;
+  line-height: 0;
+}
+.clean {
+  clear: both;
+}
+.bt_contact {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 30px 30px -10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+

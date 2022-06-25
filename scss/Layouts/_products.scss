@@ -1,0 +1,237 @@
+.btContentWrap {
+  position: relative;
+  &.btChoise {
+    background-color: $color-pink;
+  }
+  .bb-port {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &.bb-port-pad-bottom {
+      padding-bottom: 60px;
+    }
+    & .bt_bb_cell {
+      width: 1200px;
+      max-width: calc(100% - 60px);
+      & .bt_bb_row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        display: flex;
+        & .bt_bb-column {
+          justify-content: center;
+          display: flex;
+          flex-flow: column nowrap;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-top: 40px;
+          &.js-content {
+            justify-content: left;
+          }
+          & .bt_bb_image {
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            position: relative;
+            span {
+              display: block;
+            }
+            &:hover {
+              img {
+                transform: scale3d(1.05, 1.05, 1.05);
+              }
+            }
+            img {
+              transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+              display: block;
+              margin: 0;
+              line-height: 0;
+              max-width: 100%;
+              height: auto;
+              transform: scale3d(1, 1, 1);
+            }
+          }
+          & .bt_bb_column_content {
+            width: 100%;
+            & .bt_bb_column_content_inner {
+              transition: all 300ms ease-in-out;
+              border-radius: 10px;
+              height: 100%;
+              &:hover {
+                box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+              }
+              & .bt_bb_headline_tag {
+                @include styleText($fs-3, $fw-3, $color-white-3);
+                margin-bottom: $mg-1;
+              }
+              & .bt_bb_headline {
+                & .bt_bb_headline_superheadline_person {
+                  @include styleText($fs-8, $fw-2, $color-purple);
+                  display: block;
+                  margin-top: $mg-2;
+                  margin-bottom: $mg-6;
+                  text-align: center;
+                }
+                & .bt_bb_headline_superheadline {
+                  @include styleText($fs-2, $fw-2, $color-purple);
+                  display: block;
+                  margin-bottom: $mg-6;
+                }
+                & .bt_bb_headline_content {
+                  @include styleText($fs-6, $fw-3, $color-dark-2);
+                }
+                & .bt_bb_headline_tag {
+                  & .bt_bb_headline_content_talent {
+                    @include styleText($fs-7, $fw-3, $color-dark-4);
+                  }
+                  & .bt_bb_headline_content_person {
+                    @include styleText($fs-5, $fw-3, $color-dark-4);
+                    text-align: center;
+                    display: block;
+                  }
+                }
+              }
+              & .bt_bb_text {
+                padding: 0 $pd-1;
+                @include styleText($fs-1-1, $fw-1, $color-dark-4);
+                &.bt_bb_align_center {
+                  text-align: center;
+                }
+              }
+              & .list-brand {
+                text-align: center;
+                margin-bottom: 35px;
+                & .bt_bb_icon {
+                  display: inline-block;
+                  padding: 0 $pd-0;
+                  i {
+                    color: $color-dark-3;
+                  }
+                }
+              }
+            }
+            & .bt_bb_column_content_inner_contact {
+              & .bt_bb_headline_content {
+                margin: $mg-4 0;
+                text-align: center;
+                & .bt_bb_headline_content_contact {
+                  @include styleText($fs-215-rem, $fw-3, $color-dark-3);
+                }
+              }
+              & .btContactRow {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: $pd-1;
+                input {
+                  width: 100%;
+                  padding: $pd-1 $pd-1 $pd-1 $pd-3-5 !important;
+                  font-size: 0.8em !important;
+                  height: 3.7em;
+                }
+                textarea {
+                  padding: $pd-1 $pd-1 $pd-1 $pd-3-5 !important;
+                  height: 90px;
+                  line-height: 1.5;
+                  font-size: $fs-8 !important;
+                  width: 100%;
+                }
+                & .btContactMessage {
+                  width: 100%;
+                }
+                & .btContactName {
+                  padding-right: $pd-1;
+                  flex: 1 0 50%;
+                  max-width: 50%;
+                }
+                & .btContactEmail {
+                  flex: 1 0 50%;
+                  max-width: 50%;
+                }
+                & .btContactList {
+                  width: 100%;
+                  button {
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    text-align: left;
+                    & .text_contact {
+                      @include styleText($fs-0, $fw-1, $color-gray-2);
+                      padding-left: $pd-5-px;
+                    }
+                    & .icon_lang {
+                      color: $color-purple;
+                      padding-left: $pd-5-px;
+                    }
+                    &:focus {
+                      outline: -webkit-focus-ring-color auto 1px;
+              
+                    }
+                  }
+                  & .dropdown-toggle {
+                    position: relative;
+                    transition: all 300ms ease;
+                    &:focus {
+                      &.show{
+                        &::after{
+                          transform: scaleY(-1);
+                        }
+                      }
+                      
+                    }
+                    &::after {
+                      color: $color-purple;
+                      position: absolute;
+                      right: 15px;
+                      bottom: 15px;
+                      opacity: .5;
+                    }
+                  }
+                }
+                & .wpcf7-form-control-wrap {
+                  display: inline-block;
+                  position: relative;
+                  width: 100%;
+                  & .icon_contact {
+                    position: absolute;
+                    bottom: 12px;
+                    left: 20px;
+                    color: $color-purple;
+                  }
+                  & .icon_mess {
+                    position: absolute;
+                    bottom: 56px;
+                    left: 19px;
+                    color: $color-purple;
+                  }
+                }
+                & .wpcf7-form-control {
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 50px;
+                  display: block;
+                  &.wpcf7-textarea {
+                    border-radius: 20px;
+                  }
+                }
+              }
+              & .bt_bb_image_contact {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bt_bb_section_top_section_coverage_image {
+  z-index: -1;
+  top: 0;
+  position: absolute;
+  img {
+    width: 100%;
+  }
+}

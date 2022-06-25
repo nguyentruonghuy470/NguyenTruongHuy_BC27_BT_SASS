@@ -1,0 +1,53 @@
+  
+.btContentCaurosel {
+  padding-top: $pd-7;
+}
+.bt_bb_column_content {
+  width: 100%;
+  & .bt_bb_column_content_inner_caurosel {
+    & .bt_bb_headline_tag {
+      @include styleText($fs-3, $fw-3, $color-white-3);
+      margin-bottom: $mg-1;
+    }
+    & .bt_bb_headline {
+      & .bt_bb_headline_superheadline_person {
+        @include styleText($fs-8, $fw-2, $color-purple);
+        display: block;
+        margin-top: $mg-2;
+        margin-bottom: $mg-6;
+        text-align: center;
+      }
+      & .bt_bb_headline_superheadline {
+        @include styleText($fs-2, $fw-2, $color-purple);
+        display: block;
+        margin-bottom: $mg-6;
+      }
+      & .bt_bb_headline_content {
+        @include styleText($fs-6, $fw-3, $color-dark-2);
+      }
+      & .bt_bb_headline_tag {
+        & .bt_bb_headline_content_talent {
+          @include styleText($fs-7, $fw-3, $color-dark-4);
+        }
+        & .bt_bb_headline_content_person {
+          @include styleText($fs-5, $fw-3, $color-dark-4);
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+    & .bt_bb_image_caurosel {
+      img {
+          width: 100%;
+      }
+    }
+  }
+}
+.bt_bb_section_bottom_section_coverage_image {
+  z-index: 0;
+  bottom: 0px;
+  position: absolute;
+  img {
+    width: 100%;
+  }
+}

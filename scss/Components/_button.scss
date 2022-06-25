@@ -1,0 +1,153 @@
+div {
+  & .btButtonWidget {
+    font-size: 0.9rem;
+    display: inline-block;
+    line-height: 1;
+    width: auto;
+    margin-top: 15px;
+    a {
+      border-radius: 50px;
+      &.btButtonWidgetLink {
+        color: #fff;
+        & .btIconWidgetIcon {
+          padding-right: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+.topBarInMenuCell {
+  display: flex;
+  line-height: 80px;
+  white-space: nowrap;
+  & .btIconWidget {
+    color: $color-dark-2;
+    margin-left: 1em;
+    & .bt_bb_icon_holder {
+      &:hover {
+        color: $color-purple;
+      }
+    }
+  }
+}
+
+.topBarInMenu {
+  & .btButtonWidget {
+    .btButtonWidgetLink {
+      padding: 1.1em 1.5em;
+      display: flex;
+      background-color: $color-purple;
+      transition: all 1s ease;
+      &:hover {
+        box-shadow: 0 0 0 1px $color-purple inset;
+        background-color: $color-white-3;
+        & .btButtonWidgetText {
+          color: $color-purple;
+        }
+        & .btIconWidgetIcon {
+          color: $color-purple;
+        }
+      }
+    }
+  }
+}
+
+.btAllLight {
+  &.btNewsletter {
+    & .btNewsletterColumn {
+      margin-top: $mg-45-px;
+      margin-bottom: $mg-6;
+      input {
+        &::placeholder {
+          @include styleText($fs-1, $fw-1, $color-white-3);
+        }
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        outline: none;
+        width: 100%;
+        background: transparent;
+        line-height: 1;
+        display: block;
+        padding: 1em;
+        text-align: center;
+        border-radius: 50px;
+        transition: all 500ms ease;
+        &:focus {
+          border: 1px solid rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    & .btNewsletterButton {
+      input {
+        box-shadow: 0 0 0 3em #fff inset;
+        border-radius: 50px;
+        border: none;
+        height: $hg-4-em;
+        width: 100% !important;
+        letter-spacing: 1px;
+        transition: all 300ms ease;
+        background: transparent;
+        cursor: pointer;
+        @include styleText($fs-8, $fw-2, $color-dark-2);
+        &:hover {
+          box-shadow: 0 0 0 1px #fff inset;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.list-brand {
+  & .bt_bb_icon {
+    & .bt_bb_icon_holder {
+      i {
+        &:hover {
+          color: $color-purple !important;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  .bt_bb_icon_footer {
+    i {
+      &:hover {
+        color: $color-dark-3;
+      }
+    }
+  }
+}
+
+.menu-quick-links-container {
+  ul {
+    li {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.btContactButton {
+  max-width: 150px;
+  padding: $pd-3 0;
+
+  input {
+    background-color: $color-purple;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    letter-spacing: 1px;
+    line-height: 3.1em;
+    cursor: pointer;
+    transition: all 1s ease;
+    @include styleText($fs-9em, $fw-1, $color-white-3);
+    &:hover {
+      box-shadow: 0 0 0 1px $color-purple;
+      background-color: $color-white-3;
+      color: $color-purple;
+    }
+  }
+}

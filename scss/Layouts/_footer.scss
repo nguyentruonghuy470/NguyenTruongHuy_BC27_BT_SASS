@@ -1,0 +1,85 @@
+.bt_bb_section_footer {
+  background-image: url(http://tabula.bold-themes.com/wavy/wp-content/uploads/sites/3/2019/03/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & .bt_bb_port_footer {
+    padding-top: $pd-8;
+    padding-bottom: $pd-8;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    & .bt_bb_cell {
+      width: 1200px;
+      max-width: calc(100% - 60px);
+    }
+    & .bt_bb_row_footer {
+      margin: 0 -20px;
+      display: flex;
+      flex-wrap: wrap;
+      & .bt_bb_column_footer {
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: center;
+        display: flex;
+        & .bt_bb_column_content_footer {
+          width: 100%;
+          & .bt_bb_column_content_inner_footer {
+            color: $color-white-3;
+            & .bt_bb_headline_footer {
+              margin-bottom: 30px;
+            }
+            & .bt_bb_contact_footer {
+              margin-bottom: $pd-2;
+              & .bt_bb_content_holder {
+                span {
+                  @include styleText($fs-0, $fw-1, $color-white-3);
+                  padding-left: $pd-0-8;
+                }
+              }
+            }
+            & .bt_bb_custom_menu {
+              div {
+                ul {
+                  li {
+                    list-style: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    line-height: 1;
+                    padding: $pd-0-8 0;
+                    &:first-child {
+                      padding-top: 0;
+                    }
+                  }
+                }
+              }
+              & .menu-quick-links-container {
+                ul {
+                  li {
+                    a {
+                      @include styleText($fs-9em, $fw-1, $color-white-3);
+                    }
+                  }
+                }
+              }
+            }
+            & .social {
+              & .bt_bb_icon_footer {
+                padding-right: $pd-1;
+                float: left;
+              }
+            }
+            & .bt_bb_separator {
+              line-height: 0;
+              display: block;
+              clear: both;
+              &.bt_bb_bottom_spacing_80 {
+                margin-bottom: $mg-8-px;
+              }
+            }
+           
+          }
+        }
+      }
+    }
+  }
+}

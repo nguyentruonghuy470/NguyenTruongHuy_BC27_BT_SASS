@@ -1,0 +1,271 @@
+.mainHeader {
+  width: 100%;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+}
+.gutter {
+  max-width: 1260px;
+  margin: auto;
+}
+.port {
+  width: $w-100;
+  padding: 0 $pd-3;
+  & .btVerticalMenuTrigger{
+    display: none;
+  }
+  & .logo {
+    float: left;
+    & img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+  }
+  & .btVerticalMenuTrigger {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 48px;
+    margin: 0 0.5em 0 0;
+    font-size: 1.5em;
+    & .bt_bb_icon {
+      & button {
+        width: 24px;
+        padding: 0;
+        float: left;
+        margin: auto;
+        border: 0;
+        background-color: transparent;
+        position: absolute;
+        left: -17px;
+        bottom: 5px;
+       &#closeNav{
+        display: none;
+       }
+       & i{
+        color: $color-purple;
+       }
+      }
+
+      & .bt_bb_icon_holder {
+        color: #191919;
+      }
+    }
+  }
+}
+.menu {
+  float: right;
+  & .topBarInMenu {
+    float: right;
+    height: $l-h-80;
+    margin-left: $mg-5;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    padding-left: 50px;
+    float: right;
+    ul {
+      & .sub-menu {
+        box-shadow: 0 0 10px 0 $color-gray-1;
+        transform: scale(0.9);
+        transition: 300ms ease all;
+        opacity: 0;
+        background-color: $color-white-3;
+        margin: 0;
+        z-index: 1;
+        position: absolute;
+        width: 220px;
+        padding: 0;
+        left: -5px;
+        top: 57px;
+        & .menu-item {
+          transition: opacity 300ms ease;
+          padding: 1em 1em;
+          z-index: 4;
+          float: none;
+          position: relative;
+          &:hover {
+            a {
+              color: $color-purple;
+            }
+          }
+        }
+        a {
+          line-height: 1.7;
+          @include styleText($fs-9, $fw-2, $color-dark-3);
+          &:after {
+            transition: 300ms ease all;
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 1.5em;
+            right: 1.5em;
+            bottom: 0;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      & .menu-id {
+        position: relative;
+        &:hover {
+          & .sub-menu {
+            z-index: 1;
+            opacity: 1;
+            &::after {
+              transform: scale(1.5);
+            }
+          }
+        }
+        position: relative;
+        float: left;
+        padding: 0 $pd-5 0 0;
+        &.active {
+          & .menu-a {
+            &:hover {
+              &::after {
+                transform: scale(1.5);
+              }
+            }
+            &:after {
+              opacity: 1;
+            }
+          }
+          & .sub-menu {
+            &:hover {
+              & .menu-a {
+                &::after {
+                  transform: scale(1.5);
+                }
+              }
+            }
+          }
+        }
+        &:last-child {
+          padding: 0;
+        }
+        & .menu-a {
+          @include styleText($fs-0, $fw-2, $color-dark-2);
+          line-height: $l-h-80;
+          display: block;
+          position: relative;
+          &:after {
+            opacity: 0;
+            content: " ";
+            display: block;
+            position: absolute;
+            z-index: 5;
+            bottom: -4px;
+            margin-left: -4px;
+            left: 50%;
+            background-color: #b61984;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+          }
+          &:hover {
+            color: $color-purple;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sticky {
+  background-color: #fff;
+}
+.mainHeaderHolder {
+  text-align: center;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  width: 320px;
+  clear: both;
+  padding: 0;
+  box-shadow: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .logo {
+    float: none;
+    margin: 0;
+    padding: 0 2em 1em;
+    img {
+      margin: 0 auto;
+      display: block;
+      height: auto;
+    }
+  }
+  & .mainHeaderInner {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    & li {
+      position: relative;
+      & .subToggler {
+        width: 45px;
+        z-index: 80;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        display: block !important;
+        padding: 20px 0;
+        line-height: 1;
+        right: 0; 
+        top: -5px;
+      }
+    }
+    & .btLogoArea {
+      position: relative;
+      z-index: 1;
+    }
+    & .topBarInMenu {
+      margin: 2em 0;
+      & .topBarInMenuCell {
+        display: block;
+        float: none;
+        width: 200px;
+        margin: 1em auto 0 auto;
+        line-height: inherit;
+        & .btButtonWidget {
+          & .btButtonWidgetLink {
+            margin: 6px;
+          }
+          margin-top: 0;
+          display: block;
+        }
+        & .btIconWidget {
+          position: relative;
+          display: inline-block;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuPort {
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse;
+  padding-top: 1em;
+  & .menu-id {
+    & .sub-menu {
+      display: none;
+    }
+    & .menu-a {
+      @include styleText($fs-0, $fw-2, $color-dark-2);
+      padding: 1em 2em;
+      display: block;
+      border: none;
+    }
+  }
+}
